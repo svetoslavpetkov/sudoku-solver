@@ -180,7 +180,7 @@ export default class SmartSolver implements ISolver {
     } while (true)
   }
 
-  getResult(): ISudokuResult {
+  private getResult(): ISudokuResult {
     const rows = this.cells.map((r, rIndex) => {
       return r.map((c, cIndex) => Guard.ensure(c.getValue(), `Cannot get result, no value for rIndex ${rIndex} and cIndex ${cIndex}`))
     })
